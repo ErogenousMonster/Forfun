@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>圆盘转动</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		#container{
+			margin: 50px auto;
+			width: 0;
+			border: 100px solid;
+			border-color: red yellow blue green;
+			border-radius: 50%;
+			animation: roll 2s linear infinite;
+			-webkit-animation: roll 2s linear infinite;
+			-moz-animation: roll 2s linear infinite;
+		}
+
+		/* #container:hover{
+			animation: roll 2s linear infinite;
+			-webkit-animation: roll 2s linear infinite;
+			-moz-animation: roll 2s linear infinite;
+		} */
+
+		@keyframes roll{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+		@-webkit-keyframes roll{
+			0%{
+				-webkit-transform: rotate(0deg);
+			}
+			100%{
+				-webkit-transform: rotate(360deg);
+			}
+		}
+		}
+		@-moz-keyframes roll{
+			0%{
+				-moz-transform: rotate(0deg);
+			}
+			100%{
+				-moz-transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="container"></div>
+</body>
+</html>

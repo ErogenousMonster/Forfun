@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>循环滚动</title>
+	<style type="text/css">
+		body,h2{
+			margin: 0;
+			padding: 0;
+		}
+
+		#container{
+			width: 250px;
+			margin: 20px auto;
+			height: 50px;
+			overflow: hidden;
+		}
+
+		h2{
+			height: 50px;
+			font-size: 30px;
+			line-height: 50px;
+			text-align: center;
+			/*动画效果*/
+			transition: margin-top 0.5s ease;
+			-webkit-transition: margin-top 0.5s ease;
+			-moz-transition: margin-top 0.5s ease;
+			-o-transition: margin-top 0.5s ease;
+		}
+	</style>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var duration = 2000;
+			var oDiv = $('#container');
+			var oCurrent = 1;
+			var oHeight = oDiv.height();
+			var oFirst = oDiv.children().first();
+			var oLength = oDiv.children().length;
+			setInterval(function(){
+				var oAdd = oCurrent* -1 *oHeight;
+				oFirst.css('marginTop',oAdd + 'px');
+				if(oCurrent == oLength){
+					clearInterval();
+					oCurrent = 1;
+					oFirst.css('marginTop','0');
+				} else{
+					oCurrent ++;
+				}
+			},duration);
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<h2>我是第一行文字</h2>
+		<h2>我是第二行</h2>
+		<h2>我是最后一行文字</h2>
+	</div>
+</body>
+</html>

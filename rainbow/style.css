@@ -1,0 +1,25 @@
+body{margin: 0;padding: 0;}
+
+#container{
+	width: 1349px;
+	height: 610px;
+	position: relative;
+}
+
+/* width: 1349;
+height: 272 */
+
+#container .color{
+	height: 65px;
+	width: 1000px;
+	position: absolute;
+}
+
+#container #colorRed{background-color: red;top: 20px;left: -900px;}
+#container #colorOrange{background-color: orange;top: 105px;left: -850px;}
+#container #colorYellow{background-color: yellow;top: 190px;left: -800px;}
+#container #colorGreen{background-color: green;top: 275px;left: -750px;}
+#container #colorBlue{background-color: blue;top: 360px;left: -700px;}
+#container #colorCyan{background-color: cyan;top: 445px;left: -650px;}
+#container #colorPurple{background-color: purple;top: 530px;left: -600px;}
+

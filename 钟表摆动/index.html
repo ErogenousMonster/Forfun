@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钟表摆动</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		#container{
+			width: 2px;
+			height: 350px;
+			background-color: #000;
+			margin: 0 auto;
+			position: relative;
+		    -webkit-transform-origin: center top;
+		    -ms-transform-origin: center top;
+		    -moz-transform-origin: center top;
+		    -o-transform-origin: center top;
+		    transform-origin: center top;
+		    -webkit-transform: rotate(-30deg);
+		    -ms-transform: rotate(-30deg);
+		    -moz-transform: rotate(-30deg);
+		    -o-transform: rotate(-30deg);
+		    transform: rotate(-30deg);
+		    
+		    -webkit-animation: rotate 2s ease-in-out alternate infinite;
+		    -ms-animation: rotate 2s ease-in-out alternate infinite;
+		    -moz-animation: rotate 2s ease-in-out alternate infinite;
+		    -o-animation: rotate 2s ease-in-out alternate infinite;
+		    animation: rotate 2s ease-in-out alternate infinite;
+		}
+
+		.circle{
+			width: 0;
+			border: 60px solid;
+			border-color: #000;
+			border-radius: 50%;
+			position: absolute;
+			top: 350px;
+			left: -60px;
+		}
+
+		@-webkit-keyframes rotate{
+			to{
+				-webkit-transform: rotate(30deg);
+			}
+		}
+		@-ms-keyframes rotate{
+			to{
+				-ms-transform: rotate(30deg);
+			}
+		}
+		@-moz-keyframes rotate{
+			to{
+				-moz-transform: rotate(30deg);
+			}
+		}
+		@-o-keyframes rotate{
+			to{
+				-o-transform: rotate(30deg);
+			}
+		}
+		@keyframes rotate{
+			to{
+				transform: rotate(30deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="container"><div class="circle"></div></div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+.block{
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	background-color: yellow;
+	margin-top: 20px;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
